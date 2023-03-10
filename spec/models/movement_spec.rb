@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Movement, type: :model do
 	describe 'relationships' do
-        it { should_belong_to :user }
+        it { should belong_to :user }
     end 
 
     describe 'validations' do
