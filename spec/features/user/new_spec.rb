@@ -8,11 +8,15 @@ RSpec.describe 'the landing page' do
         expect(page).to have_content("BTE Movement Screen App")
     end 
 
-    xit 'allows you to input an email and go to the next step' do
+    it 'allows you to input an email and go to the next step' do
         visit '/'
+
         @email = 'test@test.com'
         fill_in :email, with: @email
 
-    end 
+        click_on "Submit"
 
+        expect(page).to have_content("Toe Touch")
+        expect(current_path).to eq('/mvmtone')
+    end 
 end 

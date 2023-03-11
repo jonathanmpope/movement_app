@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MovementApp</title>
+    <title>BTE Movement App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,19 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class= "container" >
+    <header class="item-a">
+      <img id="compass" src="<%= asset_path('BTE mvmt screen.png') %>" width="400" height="120">
+    </header>
+    <nav class="item-b">      
+      <%= link_to "Start Over", "/", {:class => "link"}%>
+    </nav>
+    <section class = "item-c">
+      <% flash.each do |name, msg|%>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+      <%= yield %>
+    </section>
+    <footer class="item-d"> © 2023 Building the Elite, LLC  </footer>
   </body>
 </html>
