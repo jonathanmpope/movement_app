@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   post '/', to: 'user#create'
 
   get '/mvmtone', to: 'mvmtone#new'
+  post '/mvmtone', to: 'mvmtone#create'
+
+  get '/mvmttwo', to: 'mvmttwo#new'
 end

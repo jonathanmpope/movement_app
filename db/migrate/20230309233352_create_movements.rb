@@ -3,9 +3,9 @@ class CreateMovements < ActiveRecord::Migration[5.2]
     create_table :movements do |t|
       t.string :name
       t.integer :side
-      t.boolean :qone
-      t.boolean :qtwo
-      t.boolean :qthree
+      t.string :qone
+      t.string :qtwo
+      t.string :qthree
       t.timestamps
     end
   end

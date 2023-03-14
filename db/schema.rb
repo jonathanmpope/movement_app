@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2023_03_09_234716) do
   create_table "movements", force: :cascade do |t|
     t.string "name"
     t.integer "side"
-    t.boolean "qone"
-    t.boolean "qtwo"
-    t.boolean "qthree"
+    t.string "qone"
+    t.string "qtwo"
+    t.string "qthree"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
