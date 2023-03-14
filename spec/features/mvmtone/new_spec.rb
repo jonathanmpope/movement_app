@@ -27,4 +27,15 @@ RSpec.describe 'movement assessment one page' do
 
         expect(page).to have_content("Split Squat")
     end 
+
+    it 'will not let you move forward without answering all questions' do
+        choose(id="lower_back_yes")
+        choose(id="hip_shift_no")
+
+        click_on "Next Assessment"
+
+        expect(current_path).to eq('/mvmtone')
+
+        expect(page).to have_content("Toe Touch")
+    end
 end 
