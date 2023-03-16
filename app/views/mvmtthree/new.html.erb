@@ -1,0 +1,34 @@
+<h1>Split Squat</h1>
+<p>*Watch the video below for how to do the assessment*</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cxMeM08SJK8" frameborder="0" allowfullscreen></iframe>
+
+<h3>Questions:</h3>
+<%= form_with url: '/mvmtthree', method: :post, local: true do |form|%>
+    <h3>All questions below are for your left side (left leg forward)</h3>
+    <p>*Are your thighs under your hips?*</p>
+    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300" >
+    <br>
+    <%= form.radio_button :thighs_hips_l, "yes", required: true %>
+    <%= form.label :thighs_hips_l, "Yes" %>
+    <%= form.radio_button :thighs_hips_l, "no", required: true %>
+    <%= form.label :thighs_hips_l, "No" %>
+    <p>*Is your center of mass over your back leg?*</p>
+    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <br>
+    <%= form.radio_button :com_l, "yes", required: true %>
+    <%= form.label :com_l, "Yes" %>
+    <%= form.radio_button :com_l, "no" %>
+    <%= form.label :com_l, "No" %>
+    <p>*Are your hips level or is your frontside hip slightly higher?*</p>
+    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <br>
+    <%= form.radio_button :level_l, "yes", required: true %>
+    <%= form.label :level_l, "Yes" %>
+    <%= form.radio_button :level_l, "no" %>
+    <%= form.label :level_l, "No" %>
+    <br>
+    <br>
+    
+    <%= form.submit "Next Assessment" %>
+<% end %>
+<%= button_to 'Previous Assessment', "/mvmttwo/#{@movement.id}/edit", method: :get %>

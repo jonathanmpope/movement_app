@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   post '/mvmttwo', to: 'mvmttwo#create'
 
   get '/mvmtthree', to: 'mvmtthree#new'
+  post '/mvmtthree', to: 'mvmtthree#create'
 end
