@@ -37,5 +37,4 @@ RSpec.describe 'movement assessment two page' do
 
         expect(current_path).to eq('/mvmttwo')
     end 
-
 end 
