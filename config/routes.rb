@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   patch '/mvmtone/:id', to: 'mvmtone#update'
 
   get '/mvmttwo', to: 'mvmttwo#new'
+  post '/mvmttwo', to: 'mvmttwo#create'
+
+  get '/mvmtthree', to: 'mvmtthree#new'
 end
