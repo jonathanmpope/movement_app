@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   get '/mvmtthree', to: 'mvmtthree#new'
   post '/mvmtthree', to: 'mvmtthree#create'
+
+  get '/mvmtfour', to: 'mvmtfour#new'
 end

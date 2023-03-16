@@ -25,4 +25,14 @@ RSpec.describe 'movement assessment three page' do
         expect(current_path).to eq('/mvmtthree')
     end
 
+    it 'has three questions and a submit button' do
+        choose(id="thighs_hips_l_yes")
+        choose(id="com_l_yes")
+        choose(id="level_l_no")
+
+        click_on "Next Assessment"
+
+        expect(current_path).to eq('/mvmtfour')
+    end 
+
 end 
