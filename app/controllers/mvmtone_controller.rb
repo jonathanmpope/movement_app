@@ -14,6 +14,15 @@ class MvmtoneController < ApplicationController
         end 
     end 
 
+    def edit 
+        @movement = Movement.find(params[:id])
+    end
+    
+    def update 
+        movement = Movement.find(params[:id])
+        movement.update(qone: params[:movement][:lower_back], qtwo: params[:movement][:hip_shift], qthree: params[:movement][:upper_back])
+    end 
+
     private
     def require_email
         if !current_user
