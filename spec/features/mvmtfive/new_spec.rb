@@ -36,7 +36,7 @@ RSpec.describe 'movement assessment five page' do
 
     it 'is the movement five page' do
         expect(page).to have_content("Overhead Reach")
-        expect(current_path).to eq('/mvmtfive')
+        expect(current_path).to eq('/mvmtfive/new')
     end
 
     it 'has three questions and a submit button' do
@@ -55,6 +55,6 @@ RSpec.describe 'movement assessment five page' do
 
         click_on "Finish Assessments"
 
-        expect(current_path).to eq('/mvmtfive')
+        expect(current_path).to eq('/mvmtfive/new')
     end 
 end 

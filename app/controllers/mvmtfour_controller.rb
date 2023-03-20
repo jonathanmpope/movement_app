@@ -8,9 +8,9 @@ class MvmtfourController < ApplicationController
     def create 
         movement = @user.movements.new(name: "Overhead Reach", side: 0, qone: params[:sixty_r], qtwo: params[:hundred_twenty_r], qthree: params[:hundred_eighty_r])
         if movement.save
-            redirect_to "/mvmtfive" 
+            redirect_to "/mvmtfive/new" 
         else 
-            redirect_to "/mvmtfour" 
+            redirect_to "/mvmtfour/new" 
             flash[:error] = movement.errors.full_messages
         end 
     end

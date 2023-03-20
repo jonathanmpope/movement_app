@@ -30,7 +30,7 @@ RSpec.describe 'movement assessment four page' do
 
     it 'is the movement four page' do
         expect(page).to have_content("Overhead Reach")
-        expect(current_path).to eq('/mvmtfour')
+        expect(current_path).to eq('/mvmtfour/new')
     end
 
     it 'has three questions and a submit button' do
@@ -40,7 +40,7 @@ RSpec.describe 'movement assessment four page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmtfive')
+        expect(current_path).to eq('/mvmtfive/new')
     end 
 
     it 'will not allow you to move forward without filling out all questions' do
@@ -49,6 +49,6 @@ RSpec.describe 'movement assessment four page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmtfour')
+        expect(current_path).to eq('/mvmtfour/new')
     end 
 end 

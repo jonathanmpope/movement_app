@@ -10,7 +10,7 @@ class MvmtfiveController < ApplicationController
         if movement.save
             redirect_to "/results" 
         else 
-            redirect_to "/mvmtfive" 
+            redirect_to "/mvmtfive/new" 
             flash[:error] = movement.errors.full_messages
         end 
     end

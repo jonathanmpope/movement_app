@@ -7,7 +7,7 @@ class UserController < ApplicationController
         user = User.new(user_params)
         if user.save
             session[:user_id] = user.id 
-            redirect_to "/mvmtone" 
+            redirect_to "/mvmtone/new" 
         else 
             redirect_to "/" 
             flash[:error] = user.errors.full_messages

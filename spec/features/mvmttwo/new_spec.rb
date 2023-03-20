@@ -16,7 +16,7 @@ RSpec.describe 'movement assessment two page' do
 
     it 'is the movement two page' do
         expect(page).to have_content("Split Squat")
-        expect(current_path).to eq('/mvmttwo')
+        expect(current_path).to eq('/mvmttwo/new')
     end
 
     it 'has three questions and a submit button' do
@@ -26,7 +26,7 @@ RSpec.describe 'movement assessment two page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmtthree')
+        expect(current_path).to eq('/mvmtthree/new')
     end 
 
     it 'will not allow you to move forward without filling out all questions' do
@@ -35,6 +35,6 @@ RSpec.describe 'movement assessment two page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmttwo')
+        expect(current_path).to eq('/mvmttwo/new')
     end 
 end 

@@ -13,7 +13,7 @@ RSpec.describe 'movement assessment one page' do
 
     it 'is the movement one page' do
         expect(page).to have_content("Toe Touch")
-        expect(current_path).to eq('/mvmtone')
+        expect(current_path).to eq('/mvmtone/new')
     end 
 
     it 'has three questions and a submit button' do
@@ -23,7 +23,7 @@ RSpec.describe 'movement assessment one page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmttwo')
+        expect(current_path).to eq('/mvmttwo/new')
 
         expect(page).to have_content("Split Squat")
     end 
@@ -34,7 +34,7 @@ RSpec.describe 'movement assessment one page' do
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmtone')
+        expect(current_path).to eq('/mvmtone/new')
 
         expect(page).to have_content("Toe Touch")
     end

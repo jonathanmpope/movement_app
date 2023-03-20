@@ -17,7 +17,7 @@ RSpec.describe 'the landing page' do
         click_on "Submit"
 
         expect(page).to have_content("Toe Touch")
-        expect(current_path).to eq('/mvmtone')
+        expect(current_path).to eq('/mvmtone/new')
     end 
 
     it 'will not allow you to move to the next step without an email' do
