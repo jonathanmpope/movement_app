@@ -20,7 +20,8 @@ class MvmtoneController < ApplicationController
     
     def update 
         movement = Movement.find(params[:id])
-        movement.update(qone: params[:movement][:lower_back], qtwo: params[:movement][:hip_shift], qthree: params[:movement][:upper_back])
+        movement.update(mvmtone_params)
+        redirect_to "/mvmttwo" 
     end 
 
     private
@@ -30,4 +31,8 @@ class MvmtoneController < ApplicationController
             redirect_to "/"
         end 
     end
+
+    def mvmtone_params
+        params.require(:movement).permit(:qone, :qtwo, :qthree)
+    end     
 end 

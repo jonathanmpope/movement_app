@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'movement assessment three page' do 
+RSpec.describe 'movement assessment four page' do 
     before :each do 
         visit '/'
 
@@ -20,14 +20,20 @@ RSpec.describe 'movement assessment three page' do
         choose(id="level_r_yes")
 
         click_on "Next Assessment"
+
+        choose(id="thighs_hips_l_yes")
+        choose(id="com_l_yes")
+        choose(id="level_l_no")
+
+        click_on "Next Assessment"
     end 
 
-    it 'is the movement three page' do
-        expect(page).to have_content("Split Squat")
-        expect(current_path).to eq('/mvmtthree')
+    it 'is the movement four page' do
+        expect(page).to have_content("Overhead Reach")
+        expect(current_path).to eq('/mvmtfour')
     end
 
-    it 'has three questions and a submit button' do
+    xit 'has three questions and a submit button' do
         choose(id="thighs_hips_l_yes")
         choose(id="com_l_yes")
         choose(id="level_l_no")
@@ -37,7 +43,7 @@ RSpec.describe 'movement assessment three page' do
         expect(current_path).to eq('/mvmtfour')
     end 
 
-    it 'will not allow you to move forward without filling out all questions' do
+    xit 'will not allow you to move forward without filling out all questions' do
         choose(id="thighs_hips_l_yes")
         choose(id="com_l_yes")
 

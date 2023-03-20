@@ -7,25 +7,25 @@
     <p>*Does your lower back have a uniform curve?*</p>
     <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300" >
     <br>
-    <%= form.radio_button :lower_back, "yes", required: true %>
-    <%= form.label :lower_back, "Yes" %>
-    <%= form.radio_button :lower_back, "no", required: true %>
-    <%= form.label :lower_back, "No" %>
+    <%= form.radio_button :qone, "yes", required: true %>
+    <%= form.label :qone, "Yes" %>
+    <%= form.radio_button :qone, "no", required: true %>
+    <%= form.label :qone, "No" %>
     <p>*Do your hips shift 1/2 food behind your heel?*</p>
     <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
     <br>
-    <%= form.radio_button :hip_shift, "yes", required: true %>
-    <%= form.label :hip_shift, "Yes" %>
-    <%= form.radio_button :hip_shift, "no" %>
-    <%= form.label :hip_shift, "No" %>
+    <%= form.radio_button :qtwo, "yes", required: true %>
+    <%= form.label :qtwo, "Yes" %>
+    <%= form.radio_button :qtwo, "no" %>
+    <%= form.label :qtwo, "No" %>
     <p>*Does your upper back have a uniform curve?*</p>
     <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
     <br>
-    <%= form.radio_button :upper_back, "yes", required: true %>
-    <%= form.label :upper_back, "Yes" %>
-    <%= form.radio_button :upper_back, "no" %>
-    <%= form.label :upper_back, "No" %>
+    <%= form.radio_button :qthree, "yes", required: true %>
+    <%= form.label :qthree, "Yes" %>
+    <%= form.radio_button :qthree, "no" %>
+    <%= form.label :qthree, "No" %>
     <br>
     <br>
-    <%= form.submit "Next Assessment" %>
+    <%= form.submit "Update Assessment" %>
 <% end %>
