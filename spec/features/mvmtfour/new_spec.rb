@@ -33,14 +33,14 @@ RSpec.describe 'movement assessment four page' do
         expect(current_path).to eq('/mvmtfour')
     end
 
-    xit 'has three questions and a submit button' do
-        choose(id="thighs_hips_l_yes")
-        choose(id="com_l_yes")
-        choose(id="level_l_no")
+    it 'has three questions and a submit button' do
+        choose(id="sixty_r_no")
+        choose(id="hundred_twenty_r_yes")
+        choose(id="hundred_eighty_r_no")
 
         click_on "Next Assessment"
 
-        expect(current_path).to eq('/mvmtfour')
+        expect(current_path).to eq('/mvmtfive')
     end 
 
     xit 'will not allow you to move forward without filling out all questions' do
