@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   post '/mvmtfour', to: 'mvmtfour#create'
 
   get 'mvmtfive', to: 'mvmtfive#new'
+  post 'mvmtfive', to: 'mvmtfive#create'
+
+  # get 'results', to: 'results#index'
+  resources :results, only: [:index]
 end
