@@ -14,6 +14,16 @@ class MvmtfiveController < ApplicationController
             flash[:error] = movement.errors.full_messages
         end 
     end
+
+    def edit 
+        @movement = Movement.find(params[:id])
+    end
+    
+    def update 
+        movement = Movement.find(params[:id])
+        movement.update(mvmtfive_params)
+        redirect_to "/results" 
+    end 
     
     private
     def require_email
@@ -23,4 +33,7 @@ class MvmtfiveController < ApplicationController
         end 
     end
 
+    def mvmtfive_params
+        params.require(:movement).permit(:qone, :qtwo, :qthree)
+    end
 end 

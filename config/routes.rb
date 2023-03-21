@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :mvmtfour, only: [:new, :create, :edit, :update]
 
-  resources :mvmtfive, only: [:new, :create]
+  resources :mvmtfive, only: [:new, :create, :edit, :update]
   
   resources :results, only: [:index]
 end
