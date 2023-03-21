@@ -15,6 +15,16 @@ class MvmttwoController < ApplicationController
         end 
     end
 
+    def edit 
+        @movement = Movement.find(params[:id])
+    end
+    
+    def update 
+        movement = Movement.find(params[:id])
+        movement.update(mvmttwo_params)
+        redirect_to "/mvmtthree/new" 
+    end 
+
     private
     def require_email
         if !current_user
@@ -23,4 +33,7 @@ class MvmttwoController < ApplicationController
         end 
     end
 
+    def mvmttwo_params
+        params.require(:movement).permit(:qone, :qtwo, :qthree)
+    end
 end 

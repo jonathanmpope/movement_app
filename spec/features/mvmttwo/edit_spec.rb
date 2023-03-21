@@ -14,15 +14,15 @@ RSpec.describe 'movement edit assessment one page' do
     it 'has a back button after ' do
         user = User.create!(email: 'test@test.com')
        
-        movement = user.movements.create!(name: "Toe Touch", side: 2, qone: 'yes', qtwo: 'yes', qthree: 'no')
+        movement = user.movements.create!(name: "Split Squat", side: 1, qone: 'yes', qtwo: 'yes', qthree: 'no')
 
-        visit "/mvmtone/#{movement.id}/edit"
+        visit "/mvmttwo/#{movement.id}/edit"
 
         choose(id="movement_qone_no")
 
         click_on "Update Assessment"
 
-        expect(current_path).to eq('/mvmttwo/new')
+        expect(current_path).to eq('/mvmtthree/new')
     end 
 
 end 

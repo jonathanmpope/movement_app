@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   resources :mvmtone, only: [:new, :create, :edit, :update]
 
-  resources :mvmttwo, only: [:new, :create]
+  resources :mvmttwo, only: [:new, :create, :edit, :update]
 
   resources :mvmtthree, only: [:new, :create]
 
