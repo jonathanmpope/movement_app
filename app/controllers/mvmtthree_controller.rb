@@ -15,11 +15,25 @@ class MvmtthreeController < ApplicationController
         end 
     end
 
+    def edit 
+        @movement = Movement.find(params[:id])
+    end
+    
+    def update 
+        movement = Movement.find(params[:id])
+        movement.update(mvmtthree_params)
+        redirect_to "/mvmtfour/new" 
+    end 
+
     private
     def require_email
         if !current_user
             flash[:error] = "Sorry, you must input your email first" 
             redirect_to "/"
         end 
+    end
+
+    def mvmtthree_params
+        params.require(:movement).permit(:qone, :qtwo, :qthree)
     end
 end 

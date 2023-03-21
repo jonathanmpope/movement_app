@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :mvmttwo, only: [:new, :create, :edit, :update]
 
-  resources :mvmtthree, only: [:new, :create]
+  resources :mvmtthree, only: [:new, :create, :edit, :update]
 
   resources :mvmtfour, only: [:new, :create]
 
