@@ -24,6 +24,18 @@ module ApplicationHelper
             @split_squat_one = "https://www.youtube.com/embed/P6esvZMrRe4"
             @split_squat_two = "https://www.youtube.com/embed/a-L-JmqvICI"
         end 
-        
+    end 
+
+    def overhead_movements
+        if @user.overhead_question_one_l == 'no' || @user.overhead_question_one_r == 'no'
+            @overhead_one = "https://www.youtube.com/embed/vZ_YVAM3mLY"
+            @overhead_two = "https://www.youtube.com/embed/29KE5vYC9jQ"
+        elsif @user.overhead_question_two_l == 'no' || @user.overhead_question_two_r == 'no'
+            @overhead_one = "https://www.youtube.com/embed/uw3cUWTL0T0"
+            @overhead_two = "https://www.youtube.com/embed/fe_whC0HRko"
+        else 
+            @overhead_one = "https://www.youtube.com/embed/HtQlKXsRJHE"
+            @overhead_two = "https://www.youtube.com/embed/YTAwpiX2Dsg"
+        end
     end 
 end

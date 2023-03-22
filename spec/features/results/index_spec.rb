@@ -53,4 +53,7 @@ RSpec.describe 'movement edit assessment one page' do
         expect(page).to have_content("Split Squat Movements")
     end
 
+    it 'has overhead reach results' do
+        expect(page).to have_content("Overhead Reach Movements")
+    end
 end 

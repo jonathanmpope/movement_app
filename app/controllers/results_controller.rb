@@ -6,6 +6,7 @@ class ResultsController < ApplicationController
         @movement = Movement.last
         toe_touch_movements
         split_squat_movements
+        overhead_movements
     end 
 
     private
