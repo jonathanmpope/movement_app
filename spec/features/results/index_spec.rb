@@ -49,4 +49,8 @@ RSpec.describe 'movement edit assessment one page' do
         expect(page).to have_content("Toe Touch Movements")
     end
 
+    it 'has results for the split squat' do
+        expect(page).to have_content("Split Squat Movements")
+    end
+
 end 

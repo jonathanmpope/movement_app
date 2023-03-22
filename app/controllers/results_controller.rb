@@ -5,6 +5,7 @@ class ResultsController < ApplicationController
     def index 
         @movement = Movement.last
         toe_touch_movements
+        split_squat_movements
     end 
 
     private
