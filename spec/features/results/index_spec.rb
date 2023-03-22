@@ -45,5 +45,8 @@ RSpec.describe 'movement edit assessment one page' do
         expect(current_path).to eq('/results')
     end
 
+    it 'has results for the toe touch' do
+        expect(page).to have_content("Toe Touch Movements")
+    end
 
 end 
