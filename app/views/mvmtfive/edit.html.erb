@@ -2,25 +2,28 @@
 <p>*Watch the video below for how to do the assessment*</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cxMeM08SJK8" frameborder="0" allowfullscreen></iframe>
 
-<h3>Questions:</h3>
+<h2>Questions:</h2>
 <%= form_with model: @movement, method: :patch, url: "/mvmtfive/#{@movement.id}", local: true do |form|%>
-    <h3>All questions below are for your left arm</h3>
-    <p>*Do you have 60 degrees of flexion?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300" >
+    <h2>How to answer all questions below:</h2>
+    <img id="compass" src="<%= asset_path('overhead reach yes compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('overhead reach no compressed.jpeg') %>" height="500" >
+    <h2>All questions below are for your left arm</h2>
+    <h3>*Do you have at least 60 degrees of flexion?*</h3>
+    <img id="compass" src="<%= asset_path('overhead reach q1 - yes compressed.jpeg') %>" height="300" >
     <br>
     <%= form.radio_button :qone, "yes", required: true %>
     <%= form.label :qone, "Yes" %>
     <%= form.radio_button :qone, "no", required: true %>
     <%= form.label :qone, "No" %>
-    <p>*Do you have 120 degrees of flexion?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <h3>*Do you have at least 60-120 degrees of flexion?*</h3>
+    <img id="compass" src="<%= asset_path('overhead reach q2 - yes compressed.jpeg') %>" height="300" >
     <br>
     <%= form.radio_button :qtwo, "yes", required: true %>
     <%= form.label :qtwo, "Yes" %>
     <%= form.radio_button :qtwo, "no" %>
     <%= form.label :qtwo, "No" %>
-    <p>*Do you have 180 degrees of flexion?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <h3>*Do you have more than 120 degrees of flexion?*</h3>
+    <img id="compass" src="<%= asset_path('overhead reach q3 - yes compressed.jpeg') %>" height="300" >
     <br>
     <%= form.radio_button :qthree, "yes", required: true %>
     <%= form.label :qthree, "Yes" %>
