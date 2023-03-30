@@ -2,25 +2,30 @@
 <p>*Watch the video below for how to do the assessment*</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cxMeM08SJK8" frameborder="0" allowfullscreen></iframe>
 
-<h3>Questions:</h3>
+<h2>Questions:</h2>
 <%= form_with model: @movement, method: :patch, url: "/mvmtthree/#{@movement.id}", local: true do |form|%>
-     <h3>All questions below are for your left side (right leg forward)</h3>
-    <p>*Are your thighs under your hips?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300" >
+    <h2>All questions below are for your left side (left leg forward)</h2>
+    <h3>*Are your thighs under your hips?*</h3>
+    <img id="compass" src="<%= asset_path('split squat q1 - yes compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('split squat q1 - no - 1 compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('split squat q1 - no - 2 compressed.jpeg') %>" height="500" >
     <br>
     <%= form.radio_button :qone, "yes", required: true %>
     <%= form.label :qone, "Yes" %>
     <%= form.radio_button :qone, "no", required: true %>
     <%= form.label :qone, "No" %>
-    <p>*Is your center of mass over your back leg?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <h3>*Is your center of mass over your back leg (stacked ear to knee)?*</h3>
+    <img id="compass" src="<%= asset_path('split squat q2 - yes compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('split squat q2 - no - 1 compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('split squat q2 - no - 2 compressed.jpeg') %>" height="500" >
     <br>
     <%= form.radio_button :qtwo, "yes", required: true %>
     <%= form.label :qtwo, "Yes" %>
     <%= form.radio_button :qtwo, "no" %>
     <%= form.label :qtwo, "No" %>
-    <p>*Are your hips level or is your frontside hip slightly higher?*</p>
-    <img id="compass" src="<%= asset_path('Toe Touch.png') %>" width="300">
+    <h3>*Are your hips level?*</h3>
+    <img id="compass" src="<%= asset_path('split squat q3 - yes compressed.jpeg') %>" height="500" >
+    <img id="compass" src="<%= asset_path('split squat q3 - no compressed.jpeg') %>" height="500" >
     <br>
     <%= form.radio_button :qthree, "yes", required: true %>
     <%= form.label :qthree, "Yes" %>
