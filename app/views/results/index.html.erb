@@ -3,18 +3,23 @@
 <h3>Toe Touch Movements</h3>
 <% if @toe_touch_one != nil %>
     <p>*Perform each exercise for 2 minutes (1-minute per side when applicable)*</p>
+    <h4>Primary Movement Drill (do this first)</h4>
     <iframe width="560" height="315" src=<%=@toe_touch_one%> frameborder="0" allowfullscreen></iframe>
-    <p>*Info about this type of movement*</p>
+    <h4>Secondary Movement Drill (do this second)</h4>
     <iframe width="560" height="315" src=<%=@toe_touch_two%> frameborder="0" allowfullscreen></iframe>
 <% else %>
     <p>*You have no toe touch movements*</p>
 <% end %>
 <h3>Split Squat Movements</h3>
-<p>*Info about this type of movement*</p>
-<iframe width="560" height="315" src=<%=@split_squat_one%> frameborder="0" allowfullscreen></iframe>
-<p>*Info about this type of movement*</p>
-<iframe width="560" height="315" src=<%=@split_squat_two%> frameborder="0" allowfullscreen></iframe>
-
+<% if @split_squat_one != nil %>
+    <p>*Perform each exercise for 2 minutes (1-minute per side when applicable)*</p>
+    <h4>Primary Movement Drill (do this first)</h4>
+    <iframe width="560" height="315" src=<%=@split_squat_one%> frameborder="0" allowfullscreen></iframe>
+    <h4>Secondary Movement Drill (do this second)</h4>
+    <iframe width="560" height="315" src=<%=@split_squat_two%> frameborder="0" allowfullscreen></iframe>
+<% else %>
+    <p>*You have no split-squat movements*</p>
+<% end %>
 <h3>Overhead Reach Movements</h3>
 <p>*Info about this type of movement*</p>
 <iframe width="560" height="315" src=<%=@overhead_one%> frameborder="0" allowfullscreen></iframe>

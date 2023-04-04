@@ -31,6 +31,14 @@ class User < ApplicationRecord
         movements.where(name: 'Split Squat').where(side: 0).order(:created_at).first.qtwo
     end
 
+    def split_squat_question_three_l
+        movements.where(name: 'Split Squat').where(side: 1).order(:created_at).first.qthree
+    end 
+
+    def split_squat_question_three_r
+        movements.where(name: 'Split Squat').where(side: 0).order(:created_at).first.qthree
+    end
+
     def overhead_question_one_l
         movements.where(name: 'Overhead Reach').where(side: 1).order(:created_at).first.qone
     end

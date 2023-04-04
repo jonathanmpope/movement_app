@@ -23,9 +23,12 @@ module ApplicationHelper
         elsif @user.split_squat_question_two_l == 'no' || @user.split_squat_question_two_r == 'no'
             @split_squat_one = "https://www.youtube.com/embed/pTSDOjDNBo8"
             @split_squat_two = "https://www.youtube.com/embed/J81Qhs2SX4M"
-        else 
+        elsif @user.split_squat_question_three_l == 'no' || @user.split_squat_question_three_r == 'no'
             @split_squat_one = "https://www.youtube.com/embed/P6esvZMrRe4"
             @split_squat_two = "https://www.youtube.com/embed/a-L-JmqvICI"
+        else 
+            @split_squat_one = nil 
+            @split_squat_two = nil 
         end 
     end 
 
