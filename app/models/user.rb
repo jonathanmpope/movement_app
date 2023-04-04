@@ -54,4 +54,12 @@ class User < ApplicationRecord
     def overhead_question_two_r
         movements.where(name: 'Overhead Reach').where(side: 0).order(:created_at).first.qtwo
     end
+
+    def overhead_question_three_l
+        movements.where(name: 'Overhead Reach').where(side: 1).order(:created_at).first.qthree
+    end
+
+    def overhead_question_three_r
+        movements.where(name: 'Overhead Reach').where(side: 0).order(:created_at).first.qthree
+    end
 end 

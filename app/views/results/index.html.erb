@@ -1,6 +1,7 @@
 <h1>Your Movement Assessment Results</h1>
-
-<h3>Toe Touch Movements</h3>
+<p>Below you'll find overview videos of all movement drills. You've also been emailed links to the videos (short demo and full explanation video), along with guidelines on how to apply these into your training program.</p>
+<p>We suggest performing the primary and secondary exercises from a single category 2x per day.<p> 
+<h2>Toe Touch Movements</h2>
 <% if @toe_touch_one != nil %>
     <p>*Perform each exercise for 2 minutes (1-minute per side when applicable)*</p>
     <h4>Primary Movement Drill (do this first)</h4>
@@ -10,7 +11,7 @@
 <% else %>
     <p>*You have no toe touch movements*</p>
 <% end %>
-<h3>Split Squat Movements</h3>
+<h2>Split Squat Movements</h2>
 <% if @split_squat_one != nil %>
     <p>*Perform each exercise for 2 minutes (1-minute per side when applicable)*</p>
     <h4>Primary Movement Drill (do this first)</h4>
@@ -20,10 +21,14 @@
 <% else %>
     <p>*You have no split-squat movements*</p>
 <% end %>
-<h3>Overhead Reach Movements</h3>
-<p>*Info about this type of movement*</p>
-<iframe width="560" height="315" src=<%=@overhead_one%> frameborder="0" allowfullscreen></iframe>
-<p>*Info about this type of movement*</p>
-<iframe width="560" height="315" src=<%=@overhead_two%> frameborder="0" allowfullscreen></iframe>
-
+<h2>Overhead Reach Movements</h2>
+<% if @overhead_one != nil %>
+    <p>*Perform each exercise for 2 minutes (1-minute per side when applicable)*</p>
+    <h4>Primary Movement Drill (do this first)</h4>
+    <iframe width="560" height="315" src=<%=@overhead_one%> frameborder="0" allowfullscreen></iframe>
+    <h4>Secondary Movement Drill (do this second)</h4>
+    <iframe width="560" height="315" src=<%=@overhead_two%> frameborder="0" allowfullscreen></iframe>
+<% else %>
+    <p>*You have no overhead reach movements*</p>
+<% end %>
 <%= button_to 'Previous Assessment', "/mvmtfive/#{@movement.id}/edit", method: :get %>

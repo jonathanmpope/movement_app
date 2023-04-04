@@ -39,9 +39,12 @@ module ApplicationHelper
         elsif @user.overhead_question_two_l == 'no' || @user.overhead_question_two_r == 'no'
             @overhead_one = "https://www.youtube.com/embed/uw3cUWTL0T0"
             @overhead_two = "https://www.youtube.com/embed/fe_whC0HRko"
-        else 
+        elsif @user.overhead_question_three_l == 'no' || @user.overhead_question_three_r == 'no'
             @overhead_one = "https://www.youtube.com/embed/HtQlKXsRJHE"
             @overhead_two = "https://www.youtube.com/embed/YTAwpiX2Dsg"
+        else 
+            @overhead_one = nil 
+            @overhead_two = nil 
         end
     end 
 end
