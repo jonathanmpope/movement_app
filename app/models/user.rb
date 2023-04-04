@@ -11,6 +11,10 @@ class User < ApplicationRecord
         movements.where(name: 'Toe Touch').order(:created_at).first.qtwo
     end 
 
+    def toe_touch_question_three
+        movements.where(name: 'Toe Touch').order(:created_at).first.qthree
+    end 
+
     def split_squat_question_one_l
         movements.where(name: 'Split Squat').where(side: 1).order(:created_at).first.qone
     end

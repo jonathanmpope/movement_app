@@ -7,9 +7,12 @@ module ApplicationHelper
         elsif @user.toe_touch_question_one == 'yes' && @user.toe_touch_question_two == 'no'
             @toe_touch_one = "https://www.youtube.com/embed/P6esvZMrRe4"
             @toe_touch_two = "https://www.youtube.com/embed/q-bs8kooUOg"
-        else 
+        elsif @user.toe_touch_question_one == 'yes' && @user.toe_touch_question_two == 'yes' && @user.toe_touch_question_three == 'no'
             @toe_touch_one = "https://www.youtube.com/embed//wi6Zu--YopU"
             @toe_touch_two = "https://www.youtube.com/embed/rwjyzb7PYUQ"
+        else
+            @toe_touch_one = nil 
+            @toe_touch_two = nil 
         end 
     end
     
