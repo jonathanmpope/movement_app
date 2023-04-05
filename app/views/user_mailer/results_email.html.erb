@@ -4,13 +4,45 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h2>Your Results</h2>
-    <p>Instructions go here</p>
-    <h3>Toe Touch One Exercise <%= link_to "can be viewed at this link", "#{@toe_touch_one}" %></h3>
-    <h3>Toe Touch Two Exercise <%= link_to "can be viewed at this link", "#{@toe_touch_two}" %></h3>
-    <h3>Split Squat One Exercise <%= link_to "can be viewed at this link", "#{@split_squat_one}" %></h3>
-    <h3>Split Squat Two Exercise <%= link_to "can be viewed at this link", "#{@split_squat_two}" %></h3>
-    <h3>Overhead Reach One Exercise <%= link_to "can be viewed at this link", "#{@overhead_one}" %></h3>
-    <h3>Overhead Reach Two Exercise <%= link_to "can be viewed at this link", "#{@overhead_two}" %></h3>
+    <h2>Your <%= link_to "BTE Movement Assessment", "https://bte-movement-app.herokuapp.com/" %> Results</h2>
+    <p>We suggest retesting your movement once per month to ensure improvements</p>
+    <h3>Instructions:</h3>
+    <ul>
+      <li>Total daily time commitment = 8 minutes </li>
+      <li>Perform these exercises before your regular warm-up</li>
+      <li>Perform each exercise for two minutes (1-minute per side when applicable)</li>
+      <li>Perform exercise one first, then exercise two</li>
+      <li>Do two exercises (exercise 1 + 2), twice per day (before & sometime after training)</li>
+      <li>Alternate which exercises you're doing daily (e.g. day 1 = toe touch exercises, day 2 = split squat exercises, etc.)</li>
+      <li>These won't feel intense, that's normal. <%= link_to "Learn why here.", "https://bte-movement-app.herokuapp.com/about" %></li>
+    </ul>
+    <h3>Exercises:</h3>
+    <% if params[:toe_touch_one_long] != nil %>
+      <strong>Toe Touch Exercises:</strong>
+      <ul>
+        <li>Toe Touch One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:toe_touch_one_long]}" %></li>
+        <li>Toe Touch One Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:toe_touch_one_short]}" %></li>
+        <li>Toe Touch Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:toe_touch_two_long]}" %></li>
+        <li>Toe Touch Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:toe_touch_two_short]}" %></li>
+      </ul>
+    <% end %>
+    <% if params[:split_squat_one_long] != nil %>
+      <strong>Split Squat Exercises:</strong>
+      <ul>
+        <li>Split Squat One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:split_squat_one_long]}" %></li>
+        <li>Split Squat One Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:split_squat_one_short]}" %></li>
+        <li>Split Squat Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:split_squat_two_long]}" %></li>
+        <li>Split Squat Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:split_squat_two_short]}" %></li>
+      </ul>
+    <% end %>
+    <% if params[:overhead_one_long] != nil %>
+      <strong>Overhead Reach Exercises:</strong>
+      <ul>
+        <li>Overhead Reach One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:overhead_one_long]}" %></li>
+        <li>Overhead Reach One Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:overhead_one_short]}" %></li>
+        <li>Overhead Reach Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{params[:overhead_two_long]}" %></li>
+        <li>Overhead Reach Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{params[:overhead_two_short]}" %></li>
+      </ul>
+    <% end %>
   </body>
 </html>

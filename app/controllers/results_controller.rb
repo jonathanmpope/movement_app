@@ -7,9 +7,12 @@ class ResultsController < ApplicationController
         toe_touch_movements
         split_squat_movements
         overhead_movements
-        UserMailer.with(user: @user, toe_touch_one: @toe_touch_one, toe_touch_two: @toe_touch_two, 
-            split_squat_one: @split_squat_one, split_squat_two: @split_squat_two, overhead_one: @overhead_one, 
-            overhead_two: @overhead_two).results_email.deliver_later
+        UserMailer.with(user: @user, toe_touch_one_short: @toe_touch_one_short, toe_touch_one_long: @toe_touch_one_long, 
+            toe_touch_two_short: @toe_touch_two_short, toe_touch_two_long: @toe_touch_two_long,
+            split_squat_one_short: @split_squat_one_short, split_squat_one_long: @split_squat_one_long,
+            split_squat_two_short: @split_squat_two_short, split_squat_two_long: @split_squat_two_long,
+            overhead_one_short: @overhead_one_short, overhead_one_long: @overhead_one_long, 
+            overhead_two_short: @overhead_two_short, overhead_two_long: @overhead_two_long).results_email.deliver_later
     end 
 
     private
