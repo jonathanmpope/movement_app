@@ -11,7 +11,8 @@ class ResultsController < ApplicationController
             toe_touch_two_short: @toe_touch_two_short, toe_touch_two_long: @toe_touch_two_long,
             split_squat_one_short: @split_squat_one_short, split_squat_one_long: @split_squat_one_long,
             split_squat_two_short: @split_squat_two_short, split_squat_two_long: @split_squat_two_long,
-            overhead_one: @overhead_one, overhead_two: @overhead_two).results_email.deliver_later
+            overhead_one_short: @overhead_one_short, overhead_one_long: @overhead_one_long, 
+            overhead_two_short: @overhead_two_short, overhead_two_long: @overhead_two_long).results_email.deliver_later
     end 
 
     private

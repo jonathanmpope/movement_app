@@ -67,16 +67,32 @@ module ApplicationHelper
     def overhead_movements
         if @user.overhead_question_one_l == 'no' || @user.overhead_question_one_r == 'no'
             @overhead_one = "https://www.youtube.com/embed/jv_iBdsPkSY"
+            @overhead_one_short = "https://youtu.be/1sAc9hYZTyg"
+            @overhead_one_long = "https://youtu.be/jv_iBdsPkSY"
             @overhead_two = "https://www.youtube.com/embed/HrmIeCBwIrQ"
+            @overhead_two_short = "https://youtu.be/R0idEmMHeAc"
+            @overhead_two_long = "https://youtu.be/HrmIeCBwIrQ"
         elsif @user.overhead_question_two_l == 'no' || @user.overhead_question_two_r == 'no'
             @overhead_one = "https://www.youtube.com/embed/bzInUVNZM5o"
+            @overhead_one_short = "https://youtu.be/aizHMMwqYsY"
+            @overhead_one_long = "https://youtu.be/bzInUVNZM5o"
             @overhead_two = "https://www.youtube.com/embed/D0NncpFuQLo"
+            @overhead_two_short = "https://youtu.be/V--2fpDmaKc"
+            @overhead_two_long = "https://youtu.be/D0NncpFuQLo"
         elsif @user.overhead_question_three_l == 'no' || @user.overhead_question_three_r == 'no'
             @overhead_one = "https://www.youtube.com/embed/nUbUn6DyDnU"
+            @overhead_one_short = "https://youtu.be/5Gyh4jwCYjc"
+            @overhead_one_long = "https://youtu.be/nUbUn6DyDnU"
             @overhead_two = "https://www.youtube.com/embed/5Y7zb2faTUU"
+            @overhead_two_short = "https://youtu.be/UWPwAtLA7YM"
+            @overhead_two_long = "https://youtu.be/5Y7zb2faTUU"
         else 
             @overhead_one = nil 
+            @overhead_one_short = nil 
+            @overhead_one_long = nil 
             @overhead_two = nil 
+            @overhead_two_short = nil 
+            @overhead_two_long = nil 
         end
     end 
 end

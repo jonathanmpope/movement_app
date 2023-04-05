@@ -24,7 +24,11 @@
       <h3>Split Squat Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@split_squat_two_long}" %></h3>
       <h3>Split Squat Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{@split_squat_two_short}" %></h3>
     <% end %>
-    <h3>Overhead Reach One Exercise <%= link_to "can be viewed at this link", "#{@overhead_one}" %></h3>
-    <h3>Overhead Reach Two Exercise <%= link_to "can be viewed at this link", "#{@overhead_two}" %></h3>
+    <% if @overhead_one_long != nil %>
+      <h3>Overhead Reach One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@overhead_one_long}" %></h3>
+      <h3>Overhead Reach One Exercise (short demo) <%= link_to "can be viewed at this link", "#{@overhead_one_short}" %></h3>
+      <h3>Overhead Reach Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@overhead_two_long}" %></h3>
+      <h3>Overhead Reach Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{@overhead_two_short}" %></h3>
+    <% end %>
   </body>
 </html>
