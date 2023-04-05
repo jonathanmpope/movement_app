@@ -18,14 +18,14 @@ module ApplicationHelper
     
     def split_squat_movements 
         if @user.split_squat_question_one_l == 'no' || @user.split_squat_question_one_r == 'no'
-            @split_squat_one = "https://www.youtube.com/embed/P6esvZMrRe4"
-            @split_squat_two = "https://www.youtube.com/embed/-v36xS5jkuA"
+            @split_squat_one = "https://www.youtube.com/embed/d3A7LztdgLk"
+            @split_squat_two = "https://www.youtube.com/embed/jXqndeBAI1Q"
         elsif @user.split_squat_question_two_l == 'no' || @user.split_squat_question_two_r == 'no'
-            @split_squat_one = "https://www.youtube.com/embed/pTSDOjDNBo8"
-            @split_squat_two = "https://www.youtube.com/embed/I0vQ4IqWKpI"
+            @split_squat_one = "https://www.youtube.com/embed/tal2pK5qBXA"
+            @split_squat_two = "https://www.youtube.com/embed/4iFgJwmMXD0"
         elsif @user.split_squat_question_three_l == 'no' || @user.split_squat_question_three_r == 'no'
-            @split_squat_one = "https://www.youtube.com/embed/P6esvZMrRe4"
-            @split_squat_two = "https://www.youtube.com/embed/a-L-JmqvICI"
+            @split_squat_one = "https://www.youtube.com/embed/-ocBo3VneWI"
+            @split_squat_two = "https://www.youtube.com/embed/aw4EKkxNPlw"
         else 
             @split_squat_one = nil 
             @split_squat_two = nil 
