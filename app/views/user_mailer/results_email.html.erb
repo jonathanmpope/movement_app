@@ -5,18 +5,25 @@
   </head>
   <body>
     <h2>Your Results</h2>
-    <p>Instructions go here</p>
+    <p>Instructions:</p>
     <ul>
-      <li>Perform each exercise for one minute</li>
+      <li>Perform each exercise for two minutes (1-minute per side when applicable)</li>
+      <li>Do two exercises (exercise 1 + 2), twice per day (before & after training)</li>
+      <li>Alternate which exercises you're doing daily (e.g. day 1 = toe touch exercises, day 2 = split squat exercises)</li>
+      <li>These won't feel intense, that's OK. <%= link_to "Learn why here.", "https://bte-movement-app.herokuapp.com/about" %></li>
     </ul>
-    <h3>Toe Touch One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@toe_touch_one_long}" %></h3>
-    <h3>Toe Touch One Exercise (short demo) <%= link_to "can be viewed at this link", "#{@toe_touch_one_short}" %></h3>
-    <h3>Toe Touch Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@toe_touch_two_long}" %></h3>
-    <h3>Toe Touch Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{@toe_touch_two_short}" %></h3>
-    <h3>Split Squat One Exercise (full demo & explanation)<%= link_to "can be viewed at this link", "#{@split_squat_one_long}" %></h3>
-    <h3>Split Squat One Exercise (short demo)<%= link_to "can be viewed at this link", "#{@split_squat_one_short}" %></h3>
-    <h3>Split Squat Two Exercise (full demo & explanation)<%= link_to "can be viewed at this link", "#{@split_squat_two_long}" %></h3>
-    <h3>Split Squat Two Exercise (short demo)<%= link_to "can be viewed at this link", "#{@split_squat_two_short}" %></h3>
+    <% if @toe_touch_one_long != nil %>
+      <h3>Toe Touch One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@toe_touch_one_long}" %></h3>
+      <h3>Toe Touch One Exercise (short demo) <%= link_to "can be viewed at this link", "#{@toe_touch_one_short}" %></h3>
+      <h3>Toe Touch Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@toe_touch_two_long}" %></h3>
+      <h3>Toe Touch Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{@toe_touch_two_short}" %></h3>
+    <% end %>
+    <% if @split_squat_one_long != nil %>
+      <h3>Split Squat One Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@split_squat_one_long}" %></h3>
+      <h3>Split Squat One Exercise (short demo) <%= link_to "can be viewed at this link", "#{@split_squat_one_short}" %></h3>
+      <h3>Split Squat Two Exercise (full demo & explanation) <%= link_to "can be viewed at this link", "#{@split_squat_two_long}" %></h3>
+      <h3>Split Squat Two Exercise (short demo) <%= link_to "can be viewed at this link", "#{@split_squat_two_short}" %></h3>
+    <% end %>
     <h3>Overhead Reach One Exercise <%= link_to "can be viewed at this link", "#{@overhead_one}" %></h3>
     <h3>Overhead Reach Two Exercise <%= link_to "can be viewed at this link", "#{@overhead_two}" %></h3>
   </body>
