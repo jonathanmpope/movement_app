@@ -34,14 +34,14 @@ module ApplicationHelper
 
     def overhead_movements
         if @user.overhead_question_one_l == 'no' || @user.overhead_question_one_r == 'no'
-            @overhead_one = "https://www.youtube.com/embed/vZ_YVAM3mLY"
-            @overhead_two = "https://www.youtube.com/embed/29KE5vYC9jQ"
+            @overhead_one = "https://www.youtube.com/embed/jv_iBdsPkSY"
+            @overhead_two = "https://www.youtube.com/embed/HrmIeCBwIrQ"
         elsif @user.overhead_question_two_l == 'no' || @user.overhead_question_two_r == 'no'
-            @overhead_one = "https://www.youtube.com/embed/uw3cUWTL0T0"
-            @overhead_two = "https://www.youtube.com/embed/fe_whC0HRko"
+            @overhead_one = "https://www.youtube.com/embed/bzInUVNZM5o"
+            @overhead_two = "https://www.youtube.com/embed/D0NncpFuQLo"
         elsif @user.overhead_question_three_l == 'no' || @user.overhead_question_three_r == 'no'
-            @overhead_one = "https://www.youtube.com/embed/HtQlKXsRJHE"
-            @overhead_two = "https://www.youtube.com/embed/YTAwpiX2Dsg"
+            @overhead_one = "https://www.youtube.com/embed/nUbUn6DyDnU"
+            @overhead_two = "https://www.youtube.com/embed/5Y7zb2faTUU"
         else 
             @overhead_one = nil 
             @overhead_two = nil 
