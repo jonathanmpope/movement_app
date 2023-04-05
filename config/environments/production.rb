@@ -84,19 +84,19 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   # uncomment before moving to production
-  # config.action_mailer.delivery_method = :smtp
-  # host = 'bte-movement-app.herokuapp.com'
-  # config.action_mailer.default_url_options = { :host => host }
+  config.action_mailer.delivery_method = :smtp
+  host = 'bte-movement-app.herokuapp.com'
+  config.action_mailer.default_url_options = { :host => host }
 
   # # SMTP settings for gmail
-  # config.action_mailer.smtp_settings = {
-  #   :address              => "smtp.gmail.com",
-  #   :port                 => 587,
-  #   :user_name            => ENV['gmail_username'],
-  #   :password             => ENV['gmail_password'],
-  #   :authentication       => "plain",
-  #   :enable_starttls_auto => true
-  # }
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :user_name            => ENV['gmail_username'],
+    :password             => ENV['gmail_password'],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
