@@ -1,12 +1,12 @@
 <h1>Split Squat</h1>
-<p>*Watch the video below for how to do the assessment*</p>
-<p>*Record yourself from the side & front to help answer the questions below*</p>
+<p>Watch the video below for how to do the assessment</p>
+<p>Record yourself from the side & front to help answer the questions below. Record yourself from the side to help answer the questions below. Do this before reviewing the questions to avoid altering your approach to the assessment.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ha2vX3OH1DI" frameborder="0" allowfullscreen></iframe>
 
 <h2>Questions:</h2>
 <%= form_with model: @movement, method: :patch, url: "/mvmttwo/#{@movement.id}", local: true do |form|%>
     <h2>All questions below are for your right side (right leg forward)</h2>
-    <h3>*Are your thighs under your hips?*</h3>
+    <h3>Are your thighs under your hips?</h3>
     <img id="compass" src="<%= asset_path('split squat q1 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('split squat q1 - no - 1 compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('split squat q1 - no - 2 compressed.jpeg') %>" height="500" >
@@ -15,7 +15,7 @@
     <%= form.label :qone, "Yes" %>
     <%= form.radio_button :qone, "no", required: true %>
     <%= form.label :qone, "No" %>
-    <h3>*Is your center of mass over your back leg (stacked ear to knee)?*</h3>
+    <h3>Is your center of mass over your back leg (stacked ear to knee)?</h3>
     <img id="compass" src="<%= asset_path('split squat q2 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('split squat q2 - no - 1 compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('split squat q2 - no - 2 compressed.jpeg') %>" height="500" >
@@ -24,7 +24,7 @@
     <%= form.label :qtwo, "Yes" %>
     <%= form.radio_button :qtwo, "no" %>
     <%= form.label :qtwo, "No" %>
-   <h3>*Are your hips level?*</h3>
+   <h3>Are your hips level?</h3>
     <img id="compass" src="<%= asset_path('split squat q3 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('split squat q3 - no compressed.jpeg') %>" height="500" >
     <br>
