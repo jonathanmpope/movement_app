@@ -1,11 +1,11 @@
 <h1>Toe Touch</h1>
-<p>*Watch the video below for how to do the assessment*</p>
-<p>*Record yourself from the side to help answer the questions below*</p>
+<p>Watch the video below for how to do the assessment</p>
+<p>Record yourself from the side to help answer the questions below. Do this before reviewing the questions to avoid altering your approach to the assessment.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8nrvb6z_GWY" frameborder="0" allowfullscreen></iframe>
 
 <h2>Questions:</h2>
 <%= form_with model: @movement, method: :patch, url: "/mvmtone/#{@movement.id}", local: true do |form|%>
-    <h3>*Does your lower back have a uniform curve?*</h3>
+    <h3>Does your lower back have a uniform curve?</h3>
     <img id="compass" src="<%= asset_path('toe touch q1 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('toe touch q1 - no compressed.jpeg') %>" height="500" >    
     <br>
@@ -13,7 +13,7 @@
     <%= form.label :qone, "Yes" %>
     <%= form.radio_button :qone, "no", required: true %>
     <%= form.label :qone, "No" %>
-    <h3>*Do your hips shift 1/2 foot (6 inches or 15cm) behind your heel?*</h3>
+    <h3>Do your hips shift 1/2 foot (6 inches or 15cm) behind your heel?</h3>
     <img id="compass" src="<%= asset_path('toe touch q2 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('toe touch q2 - no compressed.jpeg') %>" height="500" >
     <br>
@@ -21,7 +21,7 @@
     <%= form.label :qtwo, "Yes" %>
     <%= form.radio_button :qtwo, "no" %>
     <%= form.label :qtwo, "No" %>
-    <h3>*Does your upper back have a uniform curve?*</h3>
+    <h3>Does your upper back have a uniform curve?</h3>
     <img id="compass" src="<%= asset_path('toe touch q3 - yes compressed.jpeg') %>" height="500" >
     <img id="compass" src="<%= asset_path('toe touch q3 - no compressed.jpeg') %>" height="500" >
     <br>
